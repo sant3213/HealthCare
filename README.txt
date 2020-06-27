@@ -1,0 +1,1 @@
+This application is to attend patients queries and share investigations about diseases.
