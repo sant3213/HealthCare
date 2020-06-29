@@ -1,13 +1,13 @@
-package com.healthcareApp.healthcareApp;
+package com.healthCareApp.healthcare;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class HealthcareAppApplication {
+public class HealthCareApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HealthcareAppApplication.class, args);
+		SpringApplication.run(HealthCareApplication.class, args);
 	}
 
 }
