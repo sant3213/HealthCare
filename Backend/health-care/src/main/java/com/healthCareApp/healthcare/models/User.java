@@ -2,13 +2,10 @@ package com.healthCareApp.healthcare.models;
 
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.UUID;
 
-@EntityScan
+@Entity
 @Table(name="user")
 public class User {
 

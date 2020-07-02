@@ -3,7 +3,7 @@ package com.healthCareApp.healthcare.models;
 import javax.persistence.*;
 
 @Entity
-@Table
+@Table(name="professional")
 public class Professional extends User{
 
     @Column(name = "experience_time")
