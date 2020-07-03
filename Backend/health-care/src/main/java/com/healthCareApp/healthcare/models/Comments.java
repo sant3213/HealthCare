@@ -1,8 +1,17 @@
 package com.healthCareApp.healthcare.models;
 
+import javax.persistence.*;
+import java.util.UUID;
+
+@Entity
+@Table(name = "comments")
 public class Comments extends Query{
-	
-	private int professional_id;
+
+	@Id
+	@GeneratedValue
+	private UUID professional_id;
+
+	@Column(name="professional_name")
 	private String professional_name;
 	
 	public Comments() {
@@ -13,24 +22,27 @@ public class Comments extends Query{
 		super(title, description, date, speciality, type_publication);
 	}
 
-	public int getProfessional_id() {
+	public UUID getProfessional_id() {
 		return professional_id;
 	}
 
-	public void setProfessional_id(int professional_id) {
+	public void setProfessional_id(UUID professional_id) {
 		this.professional_id = professional_id;
 	}
 
 	public String getProfessional_name() {
 		return professional_name;
 	}
+
 	public void setProfessional_name(String professional_name) {
 		this.professional_name = professional_name;
 	}
 
 	@Override
 	public String toString() {
-		return "Comments [professional_id=" + professional_id + ", professional_name=" + professional_name + "]";
+		return "Comments{" +
+				"professional_id=" + professional_id +
+				", professional_name='" + professional_name + '\'' +
+				'}';
 	}
-	
 }

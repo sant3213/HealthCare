@@ -1,8 +1,16 @@
 package com.healthCareApp.healthcare.models;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="query")
 public class Query extends Publication {
-	
+
+	@Id
+	@GeneratedValue
 	private int id;
+
+	@Column(name = "user_id")
 	private int user_id;
 	
 	public int getId() {

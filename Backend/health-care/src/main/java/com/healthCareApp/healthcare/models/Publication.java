@@ -1,11 +1,26 @@
 package com.healthCareApp.healthcare.models;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "publication")
 public class Publication {
-	
+
+	@Column(name="title")
 	private String title;
+
+	@Column(name="description")
 	private String description;
+
+	@Column(name="date")
 	private String date;
+
+	@Column(name="speciality")
 	private String speciality;
+
+	@Column(name="type_publication")
 	private String type_publication;
 	
 	public Publication () {

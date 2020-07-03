@@ -1,8 +1,16 @@
 package com.healthCareApp.healthcare.models;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "disease")
 public class Disease extends Publication{
-	
+
+	@Id
+	@GeneratedValue
 	private String id;
+
+	@Column(name = "name")
 	private String name;
 	
 	public Disease() {
