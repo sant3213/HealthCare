@@ -1,46 +1,22 @@
-package com.healthCareApp.healthcare.models;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+package com.healthCareApp.healthcare.dto;
 
 /*
-* <h1>Patient model</h1>
-* Patient extends from User class
-* @see com.healthCareApp.healthcare.models.User
-* @author Santiago Cárdenas
-* @version 1.0
-* @since 2020
-* */
+ * <h1>PatientDto</h1>
+ * @author Santiago Cárdenas
+ * @version 1.0
+ * @since 2020
+ * */
+public class PatientDto {
 
-
-@Entity
-@Table(name="patient")
-public class Patient extends User{
-
-    @Column(name = "diet")
     private String diet;
 
-    @Column(name = "diseases")
     private String diseases;
 
-    @Column(name = "age")
     private String age;
 
-    @Column(name = "weight")
     private String weight;
 
-    @Column(name = "physical_activity")
     private String physicalActivity;
-
-    public Patient(String diet, String diseases, String age, String weight, String physicalActivity){
-        super();
-        this.diet = diet;
-        this.diseases = diseases;
-        this.age = age;
-        this.weight = weight;
-        this.physicalActivity = physicalActivity;
-    }
 
     public String getDiet() {
         return diet;

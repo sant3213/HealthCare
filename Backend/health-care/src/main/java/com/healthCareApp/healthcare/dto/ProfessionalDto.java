@@ -1,33 +1,19 @@
-package com.healthCareApp.healthcare.models;
+package com.healthCareApp.healthcare.dto;
 
-import javax.persistence.*;
+import com.healthCareApp.healthcare.models.Specialty;
 /*
- * <h1>Professional model</h1>
- * Professional extends from User class
- * @see com.healthCareApp.healthcare.models.User
+ * <h1>ProfessionalDto</h1>
  * @author Santiago Cárdenas
  * @version 1.0
  * @since 2020
  * */
-@Entity
-@Table(name="professional")
-public class Professional extends User{
+public class ProfessionalDto {
 
-    @Column(name = "experience_time")
     private String experienceTime;
 
-    @Column(name = "professional_card")
     private String professionalCard;
 
-    @ManyToOne
-    @JoinColumn(name = "professional_id")
     private Specialty specialty;
-
-    public Professional(String experienceTime, String professionalCard){
-        super();
-        this.experienceTime = experienceTime;
-        this.professionalCard = professionalCard;
-    }
 
     public String getExperienceTime() {
         return experienceTime;

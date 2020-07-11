@@ -1,56 +1,35 @@
-package com.healthCareApp.healthcare.models;
+package com.healthCareApp.healthcare.dto;
 
-import javax.persistence.*;
 import java.util.UUID;
 /*
- * <h1>User model</h1>
- * @see com.healthCareApp.healthcare.models.Patient
- * @see com.healthCareApp.healthcare.models.Professional
+ * <h1>UserDto</h1>
  * @author Santiago Cárdenas
  * @version 1.0
  * @since 2020
  * */
-@Entity
-@Table(name="user")
-public class User {
+public class UserDto {
 
-    @Id
-    @GeneratedValue
+
     private UUID id;
 
-    @Column(name = "name")
     private String name;
 
-    @Column(name = "email")
     private String email;
 
-    @Column(name = "password")
     private String password;
 
-    @Column(name = "country")
     private String country;
 
-    @Column(name = "city")
     private String city;
 
-    @Column(name = "occupation")
     private String occupation;
-
-    public User(String name, String email, String password, String country, String city, String occupation) {
-        this.name = name;
-        this.email = email;
-        this.password = password;
-        this.country = country;
-        this.city = city;
-        this.occupation = occupation;
-    }
-
-    public User() {
-
-    }
 
     public UUID getId() {
         return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
     }
 
     public String getName() {
